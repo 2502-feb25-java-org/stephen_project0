@@ -1,0 +1,17 @@
+body{
+	background-color:azure;
+}
+#java{
+	color:purple;
+}
+.yellow{
+	color:yellow;
+	}
+.green{
+	color:lime;
+}
+li{
+	color:orange;
+}
+<!-- precedence id class element
+syles: inline external-->
