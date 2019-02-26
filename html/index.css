@@ -13,5 +13,11 @@ body{
 li{
 	color:orange;
 }
+table, thead, tbody td{
+	border-color:black;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0.2px;
+}
 <!-- precedence id class element
 syles: inline external-->
