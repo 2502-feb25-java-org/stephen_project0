@@ -6,9 +6,10 @@
     <style>
         form{
             margin: 0 auto;
-            width: 400px;
+            width: 600px;
             padding: 1em;
             border: 1px solid #CCC;
+            border-radius: 1em;
         }
         form div + div{
             margin-top: 1em;
@@ -21,7 +22,7 @@
         }
         input, textarea{
             font: 1em sans-serif;
-            width: 300px;
+            /* width: 300px; */
             box-sizing: border-box;
             border: 1px solid #999;
         }
@@ -34,6 +35,7 @@
         }
         .button{
             padding-left: 90px;
+            align-content: center;
         }
         button{
             margin-left: .5em;
@@ -55,7 +57,7 @@
     <fieldset>
         <legend>Bootcamp Sign-Up</legend>
         <div class="form-example">
-            <label for="firstName">Enter your first name: </label>
+            <label for="firstName">First name: </label>
             <input type="text" name="firstName" id="firstName" required>
         </div>
         <div class="form-example">
@@ -80,7 +82,7 @@
             <label for="email">Enter your e-mail: </label>
             <input type="email" name="email" id="email" required>
         </div>
-        <div class="form-example">
+        <div class="form-example" align = "center">
             <input type="submit" value="Sign up!">
         </div>
     </fieldset>
