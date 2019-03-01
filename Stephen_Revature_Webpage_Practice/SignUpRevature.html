@@ -9,7 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="loadChanges();">
     <div class="container">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,6 +54,7 @@
             </nav>
         </header>
     </div>
+<!-- Sign up Form -->
     <div class="container">
         <main>
 
@@ -65,8 +66,8 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" name="firstName" placeholder="Name" id="firstName"
-                            required>
+                        <input type="text" class="form-control" name="firstName" placeholder="Name" id="firstName" onchange="saveChanges();"
+                           required >
                     </div>
 
                     <div class="form-group">
@@ -74,36 +75,36 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" name="lastName" placeholder="Last name" id="lastName"
+                        <input type="text" class="form-control" name="lastName" placeholder="Last name" id="lastName" onchange="saveChanges();"
                             required>
                     </div>
                 </fieldset>
                 <fieldset>
                         <div>
                             <label for="gender">Gender :
-                                    <label for="male">Male<input type="radio" name="gender" id="male"/>
-                                    <label for="female">Female<input type="radio" name="gender" id="female" /> </label>
-                                    <label for="others">Others<input type="radio" name="gender" id="others" /></label>
+                                    <label for="male">Male<input type="radio" name="gender" id="male" onchange="saveChanges();"/>
+                                    <label for="female">Female<input type="radio" name="gender" id="female"onchange="saveChanges(); "/> </label>
+                                    <label for="others">Others<input type="radio" name="gender" id="others" onchange="saveChanges();"/></label>
                                 </label>
                             </div>
                     <div class="form-group">
                         <label for="age">Age: </label>
-                        <input type="number" name="age" min="16" max="200" maxlength="3" id="age" required>
+                        <input type="number" name="age" min="16" max="200" maxlength="3" id="age" onchange="saveChanges();"required>
                     </div>
                     <div class="form-group">
                         <label for="phoneNumber">Phone Number: </label>
                         <input type="tel" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            error="use format xxx-xxx-xxxx" id="phoneNumber" required>
+                            error="use format xxx-xxx-xxxx" id="phoneNumber" onchange="saveChanges();" required>
 
                     </div>
                     <div class="form-group">
                         <label for="email">Enter your e-mail: </label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" onchange="saveChanges();" required>
                     </div>
 
                 </fieldset>
                 <div class="form-group" align="center">
-                    <input type="submit" value="submit">
+                    <input type="button" value="submit" onclick="validateAgain();">
                 </div>
             </form>
         </main>
@@ -111,6 +112,7 @@
     <div class="container">
         <footer>&copy; Revature LLC</footer>
     </div>
+<!-- Header Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -120,6 +122,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<!-- Myscript -->
+    <script src="./scripts/SignUpRevature.js"></script>
 </body>
 
 </html>

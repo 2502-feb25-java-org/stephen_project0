@@ -6,7 +6,7 @@
             HomePage
         </title>
     </head>
-    <body>
+    <body onload="loadOldSearch();">
         <h1 id="header1">Welcome to DOM API Learning</h1>
         
         <table id="the-table">
@@ -29,6 +29,9 @@
             </tr>
         </tbody>
         </table>
+        <label for="searchbox">Search: </label>
+        <input type="text" id="searchbox" name="searchbox"/>
+        <button id="search" onclick="storeSearch();">Search!</button>
         <footer></footer>
         <script src="C:\Java\stephen_project0\Stephen_Revature_Webpage_Practice\scripts\index.js"></script> <!--prefer to put scripts at the end of the body-->
 
