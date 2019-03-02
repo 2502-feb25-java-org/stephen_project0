@@ -1,0 +1,101 @@
+---Code Signal Tournaments---
+https://app.codesignal.com/tournaments
+
+---Git Download---
+https://git-scm.com/downloads
+
+---VSCode Download---
+https://code.visualstudio.com/download
+
+---First HTML Form---
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form
+
+---How to Structure HTML Form---
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form
+
+---Section vs. Article in HTML5---
+https://stackoverflow.com/questions/7549561/section-vs-article-html5
+
+---CSS Selectors CheatSheet---
+https://www.w3schools.com/cssref/css_selectors.asp
+
+---Arrow Notation in JS---
+(parameter) => {statements}
+parameter => {statements}
+parameter => expression
+parameter => {return expression}
+
+(param1, param2, ..., paramN) => {statements}
+(param1, param2, ..., paramN) => expression
+(param1, param2, ..., paramN) => {return expression}
+
+---References for Closures---
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+---Useful String Functions---
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods
+
+---BoilerPlate for HMTL5 pages with JS and CSS---
+https://github.com/h5bp/html5-boilerplate
+
+---Storage API---
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+
+---Document Object Model DOM---
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+---Element Attributes---
+https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
+
+---Change table---
+var table = document.getElementById("the-table");
+var tableAttrs = table.attributes; // Node/Element interface
+for (var i = 0; i < tableAttrs.length; i++) {
+  // HTMLTableElement interface: border attribute
+  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+    table.border = "5px";
+    table.border = "solid";
+}
+
+---Accompanying HTML for above---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <!-- <script src="domplay.js"></script> -->
+</head>
+<body>
+    <!-- at this point, body node of DOM is created, but not its children -->
+    <!-- <script src="domplay.js"></script> -->
+    <h1 id="header-text">Welcome to the DOM</h1>
+
+    <table id="the-table">
+        <thead>
+            <tr>
+                <th id="col-a">Column A</th>
+                <th>Column B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="domplay.js"></script>
+    <!-- all elements exist in the DOM now -->
+</body>
+</html>
+
+---Working with JSON---
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+

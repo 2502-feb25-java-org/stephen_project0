@@ -94,7 +94,7 @@
                     <div class="form-group">
                         <label for="phoneNumber">Phone Number: </label>
                         <input type="tel" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            error="use format xxx-xxx-xxxx" id="phoneNumber" onchange="saveChanges();" required>
+                            error="use format xxx-xxx-xxxx" id="phoneNumber" onchange="saveChanges();" onkeypress="return isNumber(event);"required>
 
                     </div>
                     <div class="form-group">
@@ -103,8 +103,8 @@
                     </div>
 
                 </fieldset>
-                <div class="form-group" align="center">
-                    <input type="button" value="submit" onclick="validateAgain();">
+                <div class="form-group">
+                    <input type="button" value="submit" onclick="validateAgain(); nameCheck();">
                 </div>
             </form>
         </main>
