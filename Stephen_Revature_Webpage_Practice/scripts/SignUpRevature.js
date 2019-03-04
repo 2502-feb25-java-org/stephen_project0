@@ -131,17 +131,6 @@ function isNumber(event) {
 //     }
 // }
 var testFunction=()=>{
-    alert(fibonacci(document.getElementById('age').value));
+    alert(fizzBuzzDiv(document.getElementById('age').value));
     console.log('clicked');
 };
-var fibonacci=(n)=>{
-    if(n == 0){
-        return 0;
-    }
-    else if(n ==1){
-        return 1;
-    }
-    else{
-        return (fibonacci(n-1))+(fibonacci(n-2));
-    }
-}
