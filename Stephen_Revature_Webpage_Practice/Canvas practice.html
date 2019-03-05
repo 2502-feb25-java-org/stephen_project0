@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Practice for Canvas</title>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script src="C:\Java\stephen_project0\Stephen_Revature_Webpage_Practice\scripts\Breakout.js"></script>
+    <!--
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('tutorial');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                
+//---Rectangles---
+                ctx.fillStyle='rgb(200,0,0)';
+                ctx.fillRect(10,10,50,50);
+
+                ctx.fillStyle='rgb(0,0,200,0.5)';
+                ctx.fillRect(30,30,50,50);
+                
+               ctx.fillStyle='rgb(200, 0,0)';
+               ctx.fillRect(25,25,100,100);
+               ctx.clearRect(45,45,60,60);
+               ctx.strokeRect(50,50,50,50);
+               
+//---Triangles---
+              ctx.beginPath();
+              ctx.moveTo(70,50);
+              ctx.lineTo(100,75);
+              ctx.lineTo(100,25);
+            ctx.fill();
+        
+//---Smiley Face---
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+            ctx.moveTo(110, 75);
+            ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+            ctx.moveTo(65, 65);
+            ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(95, 65);
+            ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+            ctx.stroke();
+            
+            // Filled triangle
+            ctx.beginPath();
+            ctx.moveTo(25, 25);
+            ctx.lineTo(105, 25);
+            ctx.lineTo(25, 105);
+            ctx.fill();
+
+            // Stroked triangle
+            ctx.beginPath();
+            ctx.moveTo(125, 125);
+            ctx.lineTo(125, 45);
+            ctx.lineTo(45, 125);
+            ctx.closePath();
+            ctx.stroke();
+
+            var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+          
+//--Makes a Circle using Path2D();
+            var circle = new Path2D();
+                circle.moveTo(125, 35);
+                circle.arc(100, 35, 25, 0, 2 * Math.PI);
+                ctx.fill(circle);
+
+//---Gradient Pattern---
+                for (var i = 0; i < 6; i++) {
+                    for (var j = 0; j < 6; j++) {
+                        ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+                            Math.floor(255 - 42.5 * j) + ', 0)';
+                        ctx.fillRect(j * 25, i * 25, 25, 25);
+                    }
+                }
+
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 0; j < 5; j++) {
+                        ctx.fillStyle='rgb(49,200,20)';
+                        ctx.fillRect(j*25,i*25, 10,10);
+                    }
+                }
+
+//---Circle gradients---    
+                for (var i = 0; i < 6; i++) {
+                    for (var j = 0; j < 6; j++) {
+                        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
+                            Math.floor(255 - 42.5 * j) + ')';
+                        ctx.beginPath();
+                        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+                        ctx.stroke();
+                    }
+                }
+
+//---transparency---
+  // draw background
+  ctx.fillStyle = '#FD0';
+  ctx.fillRect(0, 0, 75, 75);
+  ctx.fillStyle = '#6C0';
+  ctx.fillRect(75, 0, 75, 75);
+  ctx.fillStyle = '#09F';
+  ctx.fillRect(0, 75, 75, 75);
+  ctx.fillStyle = '#F30';
+  ctx.fillRect(75, 75, 75, 75);
+  ctx.fillStyle = '#FFF';
+
+  // set transparency value
+  ctx.globalAlpha = 0.2;
+
+  // Draw semi transparent circles
+  for (var i = 0; i < 7; i++) {
+    ctx.beginPath();
+    ctx.arc(75, 75, 10 + 15 * i, 0, Math.PI * 2, true);
+    ctx.fill();
+  }
+
+
+//---fill text---
+    ctx.font='48px serif';
+    ctx.textAlign='center';
+    ctx.textBaseline="middle";
+    ctx.strokeText("hello world",250,250);
+            }
+        }
+
+    </script>
+
+    <script>
+        debugger;
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var ball = {
+            x:100,
+            y:100,
+            radius: 25,
+            color: 'red',
+            draw: function () {
+                //===Create RadialGradient===
+                var radGrad=ctx.createRadialGradient(45,45,10,52,50,30);
+                radGrad.addColorStop(0,'#A7D30C');
+                radGrad.addColorStop(0.9,'#019F62');
+                radGrad.addColorStop(1,'rgba(1,159,98,0)');
+
+                //===Gradient for Background===
+                var lingrad=ctx.createLinearGradient(0,0,0,601);
+                lingrad.addColorStop(0,'blue');
+                lingrad.addColorStop(.8,'white');
+
+                //===Draw Background===
+                ctx.fillStyle=lingrad;
+                ctx.fillRect(0,0,500,500);
+
+                //===Draw Circle===
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+                ctx.closePath();
+                ctx.fillStyle = radGrad;
+                ctx.fillRect(0,0,150,150);
+            }
+
+        };
+
+        ball.draw();-->
+    </script>
+</body>
+
+</html>
