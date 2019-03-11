@@ -1,5 +1,12 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+// ---Score Variable---
+var score = 0;
+// ---time---
+var startTime = new Date();
+var endTime = 0;
+var elapseTime = 0;
+// ---Ball Variables---
 var ballRadius = 10;
 var x = canvas.width / 2;
 var y = canvas.height - 30;
@@ -30,7 +37,6 @@ for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0, status: true };
     }
-
 }
 // ---Input Handlers---
 function keyDownHandler(e) {
@@ -86,6 +92,19 @@ function drawBricks() {
 
     }
 }
+function drawScore(){
+    ctx.font = '16px Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText('Score = ' + score, 8, 20);
+}
+
+function drawTime(){
+    var endTime = new Date();
+    elapseTime = Math.floor((endTime - startTime) / 1000);
+    ctx.font = '16px Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText('Time = ' + elapseTime, 200, 20);
+}
 // ---Collision Detection---
 function collDetection() {
     for (let c = 0; c < brickColumnCount; c++) {
@@ -95,6 +114,10 @@ function collDetection() {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                     dy = -dy;
                     b.status = false;
+                    score += 100;
+                    if (score == (brickRowCount * brickColumnCount) * 100){
+                        alert ("Congradulations! Your score: " + score + "\nYour time: "+ elapseTime);
+                    }
                 }
             }
         }
@@ -105,9 +128,10 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawPaddle();
+    drawScore();
+    drawTime();
     collDetection();
     drawBricks();
-
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }
