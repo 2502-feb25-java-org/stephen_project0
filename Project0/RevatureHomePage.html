@@ -5,22 +5,29 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
   <link rel="stylesheet" href="./CSS/Default.css">
-  
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  
 
-<!-- Social Media Icons -->
+
+  <!-- Social Media Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <!-- check User -->
+  <script>
+    function checkUser() {
+      if (localStorage.username == "admin" && localStorage.password == "Password123") {
+        document.getElementById('gameLink').style.display = 'block';
+
+      }
+    }</script>
   <title>Unofficial Revature Website</title>
 </head>
 
-<body>
+<body onload="checkUser();">
   <!-- NavBar -->
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,7 +54,10 @@
             <a class="nav-link" href="Sign Up.html">Sign Up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gamepage.html">Game Page</a>
+
+            <div id="gameLink" style="display:none">
+              <a class="nav-link" href="gamepage.html">Game Page</a>
+            </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -58,13 +68,13 @@
     </nav>
 
     <!-- body -->
-      <blockquote class="blockquote text-center">
-        <h2 class="mb-0">Advance Faster and Get Farther Ahead.</h2>
-        <br>
-      <p class="mb-0">Revature is about propelling technology talent–as well as academic institutions and 
-      businesses–forward faster and more efficiently than ever before. 
-      Ready to accelerate your path to success?<p>
-      </blockquote>
+    <blockquote class="blockquote text-center">
+      <h2 class="mb-0">Advance Faster and Get Farther Ahead.</h2>
+      <br>
+      <p class="mb-0">Revature is about propelling technology talent–as well as academic institutions and
+        businesses–forward faster and more efficiently than ever before.
+        Ready to accelerate your path to success?<p>
+    </blockquote>
 
     <!-- Footer -->
     <footer class="social-footer">
@@ -77,10 +87,10 @@
         <ul class="nav-bar nav mr-auto">
           <li class="nav-item"><a href="https://www.facebook.com/revature/" class="nav-link"><i class="fa fa-facebook"
                 aria-hidden="true"></i></a></li>
-          <li class="nav-item"><a href="https://www.instagram.com/teamrevature/" class="nav-link"><i class="fa fa-instagram"
-                aria-hidden="true"></i></a></li>
-          <li class="nav-item"><a href="https://www.pinterest.com/revature" class="nav-link"><i class="fa fa-pinterest-p"
-                aria-hidden="true"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/teamrevature/" class="nav-link"><i
+                class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="nav-item"><a href="https://www.pinterest.com/revature" class="nav-link"><i
+                class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
           <li class="nav-item"><a href="https://twitter.com/WeAreRevature" class="nav-link"><i class="fa fa-twitter"
                 aria-hidden="true"></i></a></li>
         </ul>
