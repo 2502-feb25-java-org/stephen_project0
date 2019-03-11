@@ -12,14 +12,17 @@ function loadChanges(){
     console.log('loaded')
 }
 function validate(){
-    if(document.getElementById('name').value ==""){
+    if(document.getElementById('name').value == ""){
         alert("Please fill in your name!");
     }
-    else if(document.getElementById('email')){
+    else if(document.getElementById('email').value == ''){
         alert('Please fill in your email:');
     }
     
-    else if(document.getElementById('query')){
+    else if(document.getElementById('query').value == ''){
         alert('Please give us your feedback:');
+    }
+    else{
+        alert('Thank you for your feedback!');
     }
 }
