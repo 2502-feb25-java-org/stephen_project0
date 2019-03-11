@@ -11,6 +11,7 @@ function saveChanges() {
     localStorage.zipcode=document.getElementById('zipcode').value
     localStorage.state=document.getElementById('state').value
     localStorage.city=document.getElementById('city').value
+    localStorage.country = document.getElementById('country').value
 }
 //---Initialize input fields---
 function loadChanges() {
@@ -21,7 +22,6 @@ function loadChanges() {
     var phoneNumber = document.getElementById('phoneNumber')
     var email = document.getElementById('email')
     var i = localStorage.gender;
-
     firstName.value = localStorage.firstName;
     lastName.value = localStorage.lastName;
 
@@ -33,6 +33,12 @@ function loadChanges() {
     age.value = localStorage.age;
     phoneNumber.value = localStorage.phoneNumber;
     email.value = localStorage.email;
+    document.getElementById('address1').value = localStorage.address1;
+    document.getElementById('address2').value = localStorage.address2 ;
+    document.getElementById('zipcode').value = localStorage.zipcode;
+    document.getElementById('state').value = localStorage.state;
+    document.getElementById('city').value = localStorage.city;
+    document.getElementById('country').value = localStorage.country;
 }
 //---Finds which radio value is selected---
 function findRadioValue(radioGroup) {
@@ -40,7 +46,6 @@ function findRadioValue(radioGroup) {
         if (radioGroup[i].checked) {
             return i;
         }
-
     }
 }
 
@@ -68,7 +73,26 @@ function validateAgain() {
     else if (email.value == '') {
         alert('fill email');
     }
-    else alert('good job!')
+    
+    else if (email.value == '') {
+        alert('fill email');
+    }
+    
+    else if (email.value == '') {
+        alert('fill email');
+    }
+    
+    else if (email.value == '') {
+        alert('fill email');
+    }
+    
+    else if (email.value == '') {
+        alert('fill email');
+    }
+    else {
+        alert('Your account has been created!');
+        window.location.href = 'RevatureHomePage.html';
+    }
 }
 //---Checks if firstName and lastName is the same---
 function nameCheck() {
@@ -84,7 +108,7 @@ function nameCheck() {
 function isNumber(event) {
     //debugger;
 
-    var keycode = event.keyCode;
+    let keycode = event.keyCode;
     var phoneNumLength=document.getElementById('phoneNumber');
 
     if (keycode >= 48 && keycode <= 57) {
@@ -100,5 +124,24 @@ function isNumber(event) {
         console.log('false');
         return false;
     }
+}
+// ---check zipcode---
+function isZipcode(event) {
+    //debugger;
+    let keycode1 = event.keyCode;
+    var zipcodeLength=document.getElementById('zipcode');
 
+    if (keycode1 >= 48 && keycode1 <= 57) {
+        if (zipcodeLength.value.length <5) {
+            console.log('Can still type');
+            return true;
+        } else {
+            console.log('Cannot Type');
+            return false;
+        }
+    }
+    else {
+        console.log('false');
+        return false;
+    }
 }
