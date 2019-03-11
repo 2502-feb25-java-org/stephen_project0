@@ -117,6 +117,8 @@ function collDetection() {
                     score += 100;
                     if (score == (brickRowCount * brickColumnCount) * 100){
                         alert ("Congradulations! Your score: " + score + "\nYour time: "+ elapseTime);
+                        document.location.reload();
+                        clearInterval(interval);
                     }
                 }
             }
