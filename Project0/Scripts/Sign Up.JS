@@ -59,35 +59,42 @@ function validateAgain() {
     var email = document.getElementById('email')
 
     if (firstName.value == "") {
-        alert("Fill First Name!");
+        alert("Please enter your first name");
     }
     else if (lastName.value == "") {
-        alert("fill last name");
+        alert("Please enter your last name");
     }
     else if (age.value == "") {
-        alert("fill age");
+        alert("Please enter your age");
     }
     else if (phoneNumber.value == "") {
-        alert('fill phone number');
+        alert('Please enter your phone number');
     }
     else if (email.value == '') {
-        alert('fill email');
-    }
-    
-    else if (email.value == '') {
-        alert('fill email');
+        alert('Please enter your email');
     }
     
-    else if (email.value == '') {
-        alert('fill email');
+    else if (document.getElementById('address1').value == '') {
+        alert('Please fill out Address line 1');
     }
     
-    else if (email.value == '') {
-        alert('fill email');
+    else if (document.getElementById('zipcode').value == '') {
+        alert('Please enter your zipcode');
     }
     
-    else if (email.value == '') {
-        alert('fill email');
+    else if (document.getElementById('state').value == '') {
+        alert('Please choose a state');
+    }
+    
+    else if (document.getElementById('city').value == '') {
+        alert('Please enter your city');
+    }
+    
+    else if (document.getElementById('country').value == '') {
+        alert('Please choose your Country');
+    }
+    else if (document.getElementById('country').value != 'US') {
+        alert('We are only accepting US entries at this time');
     }
     else {
         alert('Your account has been created!');
