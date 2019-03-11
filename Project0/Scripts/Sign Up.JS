@@ -101,7 +101,7 @@ function validateAgain() {
         alert('We are only accepting US entries at this time');
     }
     else {
-        alert('Your account has been created!');
+        alert('Your account has been created, thank you for signing up with us!');
         window.location.href = 'RevatureHomePage.html';
     }
 }
