@@ -1,13 +1,13 @@
 function saveChanges(){
     localStorage.name=document.getElementById('name').value  
-    localStorage.email=document.getElementById('email').value 
+    localStorage.contactEmail=document.getElementById('email').value 
     localStorage.query=document.getElementById('query').value
     console.log('saved')
 }
 
 function loadChanges(){
     document.getElementById('name').value=localStorage.name 
-    document.getElementById('email').value=localStorage.email
+    document.getElementById('email').value=localStorage.contactEmail
     document.getElementById('query').value=localStorage.query
     console.log('loaded')
 }
