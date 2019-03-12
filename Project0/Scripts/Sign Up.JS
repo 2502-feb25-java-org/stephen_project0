@@ -15,30 +15,52 @@ function saveChanges() {
 }
 //---Initialize input fields---
 function loadChanges() {
-    var firstName = document.getElementById('firstName')
-    var lastName = document.getElementById('lastName')
-    var gender = document.getElementsByName('gender')
-    var age = document.getElementById('age')
-    var phoneNumber = document.getElementById('phoneNumber')
-    var email = document.getElementById('email')
-    var i = localStorage.gender;
-    firstName.value = localStorage.firstName;
-    lastName.value = localStorage.lastName;
 
+    if (localStorage.firstName != undefined) {
+        document.getElementById('firstName').value = localStorage.firstName;
+        console.log('first name found');
+    }
+    if (localStorage.lastName != undefined) {
+        document.getElementById('lastName').value = localStorage.lastName;
+        console.log("last name found");
+    }
+    if (localStorage.age != undefined) {
+        document.getElementById('age').value = localStorage.age;
+    }
+    if (localStorage.phoneNumber != undefined) {
+        document.getElementById('phoneNumber').value = localStorage.phoneNumber;
+    }
+    if (localStorage.email != undefined) {
+        document.getElementById('email').value = localStorage.email;
+    }
+    if (localStorage.address1 != undefined) {
+        document.getElementById('address1').value = localStorage.address1;
+    }
+    if (localStorage.address2 != undefined) {
+        document.getElementById('address2').value = localStorage.address2;
+    }
+    if (localStorage.zipcode != undefined) {
+        document.getElementById('zipcode').value = localStorage.zipcode;
+    }
+    if (localStorage.state != undefined) {
+        document.getElementById('state').value = localStorage.state;
+    }
+    if (localStorage.city != undefined) {
+        document.getElementById('city').value = localStorage.city;
+    }
+    if (localStorage.country != undefined) {
+        document.getElementById('country').value = localStorage.country;
+    }
+// ---Gender Radio buttons---
+// look at the array for the radio buttons, then find which index is checked,
+// then set that index's .checked to true.
+
+    var gender = document.getElementsByName('gender')
+    var i = localStorage.gender;
     if (localStorage.gender != null) {
         gender[i].checked = true;
     }
     else { }
-
-    age.value = localStorage.age;
-    phoneNumber.value = localStorage.phoneNumber;
-    email.value = localStorage.email;
-    document.getElementById('address1').value = localStorage.address1;
-    document.getElementById('address2').value = localStorage.address2;
-    document.getElementById('zipcode').value = localStorage.zipcode;
-    document.getElementById('state').value = localStorage.state;
-    document.getElementById('city').value = localStorage.city;
-    document.getElementById('country').value = localStorage.country;
 }
 //---Finds which radio value is selected---
 function findRadioValue(radioGroup) {
