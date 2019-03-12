@@ -26,15 +26,16 @@ function validate() {
     else if (document.getElementById('password').value == "") {
         alert('Please put in your password!');
     }
-    else if (localStorage.username == "admin" && localStorage.password == "Password123") {
+    else if (document.getElementById('accountname').value == "admin" && document.getElementById('password').value == "Password123") {
         document.getElementById('gameLink').style.display = 'block';
-        window.location.href = 'gamepage.html'
         localStorage.username = document.getElementById('accountname').value;
         localStorage.password = document.getElementById('password').value;    
+        window.location.href = 'gamepage.html';
     }
     else {
         localStorage.username = document.getElementById('accountname').value;
         localStorage.password = document.getElementById('password').value;
+        window.location.href = 'RevatureHomePage.html';
     }
 
 }
