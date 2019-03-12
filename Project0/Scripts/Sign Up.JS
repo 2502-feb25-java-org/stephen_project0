@@ -184,3 +184,11 @@ function validAge() {
         return false
     }
 }
+
+// ---Check User---
+function checkUser() {
+    if (localStorage.username == "admin" && localStorage.password == "Password123") {
+        document.getElementById('gameLink').style.display = 'block';
+
+    }
+}
