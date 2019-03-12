@@ -26,18 +26,20 @@ function validate() {
     else if (document.getElementById('password').value == "") {
         alert('Please put in your password!');
     }
-    else{
+    else if (localStorage.username == "admin" && localStorage.password == "Password123") {
+        document.getElementById('gameLink').style.display = 'block';
+        window.location.href = 'gamepage.html'
+        localStorage.username = document.getElementById('accountname').value;
+        localStorage.password = document.getElementById('password').value;    
+    }
+    else {
         localStorage.username = document.getElementById('accountname').value;
         localStorage.password = document.getElementById('password').value;
-        location.reload();
     }
 
 }
-
-
-function checkUser() {
-    if (localStorage.username == "admin" && localStorage.password == "Password123") {
-        document.getElementById('gameLink').style.display = 'block';
-        
+    function checkUser() {
+        if (localStorage.username == "admin" && localStorage.password == "Password123") {
+            document.getElementById('gameLink').style.display = 'block';
+        }
     }
-}

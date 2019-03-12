@@ -161,6 +161,18 @@ function draw() {
         paddleX -= 7;
     }
 }
+// ---Check user --
+function checkUser() {
+    if (localStorage.username == "admin" && localStorage.password == "Password123") {
+      
+      //send them way if they somehow get here without signing in
+    }
+    else{
+      document.getElementById('gameLink').style.display = 'none';       // Don't show gamepage
+      alert('You need Admin permissions to access this page!');
+      window.location.href = 'RevatureHomePage.html';
+    }
+  }
 
 //---Run animation---
 var interval = setInterval(draw, 10);
