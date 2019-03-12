@@ -71,7 +71,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-    fillStyle = 'black';
+    ctx.fillStyle = 'black';
     ctx.fill();
     ctx.closePath();
 }
@@ -84,7 +84,7 @@ function drawBricks() {
 
                 ctx.beginPath();
                 ctx.rect(bricks[c][r].x, bricks[c][r].y, brickWidth, brickHeight);
-                fillStyle = 'blue';
+                ctx.fillStyle ='rgb(0 ,' + Math.floor(255 - 70 * r) + ', 0)';
                 ctx.fill();
                 ctx.closePath();
             }
@@ -134,12 +134,14 @@ function draw() {
     drawTime();
     collDetection();
     drawBricks();
+// ---Bounce off Walls---
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }
     if (y + dy < ballRadius) {
         dy = -dy;
     }
+    // ---Bounce off the Paddle---
     else if (y + dy > canvas.height - ballRadius) {
         if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
