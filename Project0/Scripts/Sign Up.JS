@@ -1,3 +1,10 @@
+// ---Check User---
+function checkUser() {
+    debugger;
+    if (localStorage.username == "admin" && localStorage.password == "Password123") {
+        document.getElementById('gameLink').style.display = 'block';
+    }
+}
 //---Save changes to text fields to Local Storage---
 function saveChanges() {
     localStorage.firstName = document.getElementById('firstName').value
@@ -57,7 +64,7 @@ function loadChanges() {
 
     var gender = document.getElementsByName('gender')
     var i = localStorage.gender;
-    if (localStorage.gender != null) {
+    if (localStorage.gender != undefined) {
         gender[i].checked = true;
     }
     else { }
@@ -182,13 +189,5 @@ function isZipcode(event) {
 function validAge() {
     if (document.getElementById('age').value < 16 || document.getElementById('age').value > 100) {
         return false
-    }
-}
-
-// ---Check User---
-function checkUser() {
-    if (localStorage.username == "admin" && localStorage.password == "Password123") {
-        document.getElementById('gameLink').style.display = 'block';
-
     }
 }
